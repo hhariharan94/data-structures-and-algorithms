@@ -4,22 +4,19 @@
 // Best Complexity - O(n)
 
 function averageOfSublist(list, subsetLength) {
-        const averageOfSubsets = [];
-  let iterationCounter = 0;
-  
-          let windowSum = 0;
-        for (let windowEnd = 0; windowEnd < list.length; windowEnd++) {
-        console.log('Without Inner Iteration::', ++iterationCounter);
-      
-            windowSum += list[windowEnd];
-              if (subsetLength > 0 && windowEnd >= subsetLength - 1) {
-          console.log(windowSum, subsetLength);
-                averageOfSubsets.push(windowSum/subsetLength);
-            windowSum -= list[windowEnd - subsetLength];
-          
+    const averageOfSubsets = [];
+    let iterationCounter = 0;
+    let windowStart = 0;
+    let windowSum = 0;
+    for (let windowEnd = 0; windowEnd < list.length; windowEnd++) {
+
+        windowSum += list[windowEnd];
+        if (subsetLength > 0 && windowEnd >= subsetLength - 1) {
+            averageOfSubsets.push(windowSum / subsetLength);
+            windowSum -= list[windowStart++];
         }
     }
-          console.log(averageOfSubsets);
+    console.log(averageOfSubsets);
 
 }
 const list = [1, 2, 3, 4, 5, 6];
