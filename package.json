@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hhariharan94/data-structures-and-algorithms/issues"
   },
-  "homepage": "https://github.com/hhariharan94/data-structures-and-algorithms#readme"
+  "homepage": "https://github.com/hhariharan94/data-structures-and-algorithms#readme",
+  "dependencies": {
+    "collections": "^5.1.13"
+  }
 }
