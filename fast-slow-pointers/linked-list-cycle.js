@@ -18,7 +18,7 @@ headNode.next.next.next.next.next = new Node(6);
 function hasLinkedListCycle(headNode) {
     let iteratorNode = headNode;
     let foundCycle = false;
-    while (iteratorNode.next !== null) {
+    while (iteratorNode !== null) {
         if (iteratorNode.hasAlreadyBeenAccessed) {
             foundCycle = true;
             break;
